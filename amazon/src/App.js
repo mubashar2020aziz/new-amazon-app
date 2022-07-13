@@ -1,10 +1,12 @@
+import React from 'react';
 import './App.css';
 
 function App() {
   return (
     <>
-      Hello
-      <button className="btn btn-primary">Click Me</button>
+      <header></header>
+      <div className="m_main"></div>
+      <footer></footer>
     </>
   );
 }
