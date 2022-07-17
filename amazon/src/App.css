@@ -1,3 +1,7 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 header {
   /* height: 99px; */
   border: 1px red dashed;
@@ -16,17 +20,52 @@ header {
   border: 1px dashed blue;
   background: #eaeded;
 }
-.m_main1 {
+.m_main_top {
   height: 600px;
   border: 1px dashed green;
 }
-.m_main2 {
-  height: 422px;
+.m_main_bottom {
+  height: 4517px;
   border: 1px dashed #000;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1;
-  margin-top: -250px;
+  margin-top: -300px;
+  width: 97%;
+  margin-left: 20.5px;
 }
+.m_main_bottom_1 {
+  border: 1px dashed cyan;
+}
+.m_main_bottom_1 > div {
+  height: 423px;
+  border: 1px dashed green;
+}
+.m_main_bottom_2 {
+  border: 1px dashed purple;
+}
+.m_main_bottom_2 > div {
+  height: 428px;
+  border: 1px dashed pink;
+}
+.m_main_bottom_3 {
+  height: 367px;
+  background-color: green;
+}
+.imgCont {
+  height: 300px;
+  border: 1px dashed red;
+}
+.imgCont > div {
+  border: 1px dashed blue;
+}
+#carouselExampleControls2 .m_cc {
+  background: rgba(0, 0, 0, 0.5);
+  width: 3%;
+  height: 30%;
+  top: 108px;
+  border-radius: 2px;
+}
+
 footer {
   height: 227px;
   border: 1px dashed green;
