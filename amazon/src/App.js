@@ -1,11 +1,49 @@
 import React from 'react';
 import './App.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMapMarker } from '@fortawesome/free-solid-svg-icons';
 
 function App() {
   return (
     <>
       <header>
-        <div className="a_header_top"></div>
+        <div className="a_header_top p-1">
+          <button className="me-1 btn h-100" style={{ width: '10%' }}>
+            <img
+              className="img-fluid"
+              src="assets/amazon logo.png"
+              alt="amazon logo"
+            />
+          </button>
+          <button
+            className="lh-1 fs-6  text-white me-1 btn h-100"
+            style={{ width: '10%' }}
+          >
+            <span className="d-block" style={{ fontSize: '12px' }}>
+              Deliver to Mubashar
+            </span>
+            <FontAwesomeIcon icon={faMapMarker} />
+            <span className="fw-bold d-block">
+              <span className="m_city">Neemuch</span>
+              <span className="m_pincode">45216</span>
+            </span>
+          </button>
+          <form className="hform me-1 bg-white w-50 d-inline-block h-75">
+            C
+          </form>
+          <button className="  btn h-100" style={{ width: '4%' }}>
+            D
+          </button>
+          <button className="me-1 btn h-100" style={{ width: '8%' }}>
+            E
+          </button>
+          <button className=" btn h-100" style={{ width: '8%' }}>
+            F
+          </button>
+          <button className=" btn h-100" style={{ width: '8%' }}>
+            G
+          </button>
+        </div>
         <div className="a_header_bottom"></div>
       </header>
       <div className="m_main position-relative">
