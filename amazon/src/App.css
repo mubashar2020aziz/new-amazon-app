@@ -2,6 +2,32 @@
   margin: 0;
   padding: 0;
 }
+/* .tdbr2 {
+  border-radius: 1px ;
+} */
+.hform {
+  border: 2px solid #131921;
+  border-radius: 5px;
+}
+.hform:hover {
+  border: 2px solid #ff9900;
+}
+button:focus {
+  box-shadow: none !important;
+}
+.m_signin_model {
+  display: block;
+}
+.m_ht_signin_model a {
+  color: #333;
+  font-size: 14px;
+  padding: 3px;
+}
+.m_ht_signin_model a:hover {
+  color: #ff9900;
+  text-decoration: underline;
+}
+
 header {
   /* height: 99px; */
   border: 1px red dashed;
@@ -15,6 +41,11 @@ header {
 }
 .a_header_top > button:hover {
   border: 1px solid #fff;
+}
+.m_countrydd {
+  width: 20% !important;
+  left: 950px !important;
+  top: 25px;
 }
 .a_header_bottom {
   height: 39px;

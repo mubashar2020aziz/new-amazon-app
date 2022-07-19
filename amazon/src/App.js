@@ -1,7 +1,17 @@
 import React, { Component } from 'react';
 import './App.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMapMarker, faBars } from '@fortawesome/free-solid-svg-icons';
+import Flag from 'react-world-flags';
+import Header from './component/Header';
+import HeaderModel3 from './component/HeaderModel3';
+import {
+  faMapMarker,
+  faBars,
+  faUser,
+  faSearch,
+  faChevronDown,
+  faCartPlus,
+} from '@fortawesome/free-solid-svg-icons';
 
 class App extends Component {
   //properties
@@ -9,8 +19,8 @@ class App extends Component {
     x: '',
   };
   //constructor
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {};
   }
   //method
@@ -32,6 +42,55 @@ class App extends Component {
   render() {
     return (
       <div>
+        <div
+          className="offcanvas offcanvas-start"
+          tabIndex="-1"
+          id="offcanvasExample"
+          aria-labelledby="offcanvasExampleLabel"
+        >
+          <div className="offcanvas-header bg-dark text-light">
+            <h5 className="offcanvas-title mx-auto" id="offcanvasExampleLabel">
+              {/* <i className="fa fa-user-circle-o mx-2" aria-hidden="true"></i> */}
+              <FontAwesomeIcon icon={faUser} style={{ color: '#fff' }} />
+              Hello,Sign in
+            </h5>
+            <button
+              type="button"
+              className="btn-close text-reset bg-light"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div className="offcanvas-body">
+            <h5 className="text-dark mx-3 font-weight-bold trending">
+              Trending
+            </h5>
+            <p className="text-gray mx-3 best sellers">Best Sellers</p>
+            <p className="text-gray mx-3 new release">New Release</p>
+            <p className="text-gray mx-3 movers">Movers &amp; Shakers</p>
+            <h4 className="text-dark mx-3 my-2 font-weight-bold">
+              Digital Content And Devices
+            </h4>
+
+            {/* <!-- shop and category End --> */}
+
+            <h6 className="text-muted text-uppercase mx-3 my-3">
+              Help &amp; Setting
+            </h6>
+            <a href="#/" className="btn btn-outline-success btn-sm w-100 mb-3">
+              Your Account
+            </a>
+            <a
+              href="login.html"
+              className="btn btn-outline-warning btn-sm w-100 my-3"
+            >
+              Sign in
+            </a>
+          </div>
+        </div>
+
+        {/* <!-- finish drawer code --> */}
+
         <header>
           <div className={`a_header_top p-1 w-100 ` + this.state.x}>
             <button className="me-1 btn h-100" style={{ width: '10%' }}>
@@ -42,52 +101,137 @@ class App extends Component {
               />
             </button>
             <button
-              className="lh-1 fs-6  text-white me-1 btn h-100"
+              className="lh-1 fs-6  text-white me-1 btn h-100 m-0 row"
               style={{ width: '10%' }}
             >
-              <span className="d-block" style={{ fontSize: '12px' }}>
-                Deliver to Mubashar
-              </span>
-              <FontAwesomeIcon icon={faMapMarker} />
-              <span className="fw-bold d-block">
-                <span className="m_city">Neemuch</span>
-                <span className="m_pincode">45216</span>
-              </span>
+              <div className="col-2 d-inline-block ">
+                <FontAwesomeIcon icon={faMapMarker} className="text-white " />
+              </div>
+              <div className="col-10 text-white d-inline-block text-start">
+                <span style={{ fontSize: '10px' }}>Delivery to Mubashar</span>
+                <p style={{ fontSize: '10px', fontWeight: 'bold' }}>
+                  pakpattan 5102
+                </p>
+              </div>
             </button>
-            <form className="hform me-1 bg-white w-50 d-inline-block h-75">
-              C
+            {/* start form */}
+            <form className="hform me-1 bg-white w-50 d-inline-block ">
+              <div className="row m-0 border-end">
+                {/* form button start */}
+                <div className="col-1 tdbr p-0 ">
+                  <div class="dropdown">
+                    <button
+                      class="btn btn-sm-light dropdown-toggle"
+                      type="button"
+                      id="dropdownMenuButton1"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      All
+                    </button>
+                    <ul
+                      class="dropdown-menu"
+                      aria-labelledby="dropdownMenuButton1"
+                    >
+                      <li>
+                        <a class="dropdown-item" href="#/">
+                          Action
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#/">
+                          Another action
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#/">
+                          Something else here
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  {/* form buton end */}
+                </div>
+                <div className="col-10 tdbr2 p-0 ">
+                  <input className="form-control  " type="text" />
+                </div>
+                {/* search button start */}
+                <div className="col-1 tdbr3 p-0 ">
+                  <button type="submit" className=" w-100 btn btn-warning">
+                    <FontAwesomeIcon icon={faSearch} className="fs-5" />
+                  </button>
+                </div>
+              </div>
             </form>
-            <button className="  btn h-100" style={{ width: '3%' }}>
-              D
+            {/* form end */}
+            <button
+              className="  btn h-100 p-0"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal2"
+              style={{ width: '3%' }}
+            >
+              <Flag code={'ae'} height="10" className="me-1" />
+              <FontAwesomeIcon
+                icon={faChevronDown}
+                className="text-white w-25"
+              />
+              <Header />
             </button>
-            <button className="me-1 btn h-100" style={{ width: '7%' }}>
-              E
+            <button
+              className="me-1 btn h-100 p-0"
+              style={{ width: '7%', color: '#fff' }}
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal3"
+            >
+              <div style={{ fontSize: '10px' }}>Hello,Sign in</div>
+              <span style={{ fontSize: '12px', fontWeight: 'bold' }}>
+                Account &amp; Lists
+              </span>
+              <HeaderModel3 />
             </button>
-            <button className=" btn h-100" style={{ width: '7%' }}>
-              F
+            <button
+              className=" btn h-100 p-0"
+              style={{ width: '7%', color: '#fff' }}
+            >
+              <div style={{ fontSize: '12px' }}>Return</div>
+              <span style={{ fontSize: '16px', fontWeight: 'bold' }}>
+                &amp;Orders
+              </span>
             </button>
-            <button className=" btn h-100" style={{ width: '7%' }}>
-              G
+            <button
+              className=" btn h-100 p-0 text-white"
+              style={{ width: '7%' }}
+            >
+              <FontAwesomeIcon icon={faCartPlus} className="fs-3" /> Cart
             </button>
           </div>
           <div className="a_header_bottom">
             <nav className="ms-2 navbar navbar-expand-lg  float-start">
               <div className="container-fluid">
                 <a className="navbar-brand " href="#/">
-                  <FontAwesomeIcon icon={faBars} className="mx-1 fs-6" />
+                  <FontAwesomeIcon
+                    icon={faBars}
+                    className="mx-1 fs-6"
+                    type="button"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasExample"
+                    aria-controls="offcanvasExample"
+                  />
                   All
+                  {/* navbar sidebarclose */}
                 </a>
                 {/* <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-              >
-                <span class="navbar-toggler-icon"></span>
-              </button> */}
+                  class="navbar-toggler"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#navbarSupportedContent"
+                  aria-controls="navbarSupportedContent"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                >
+                  <span class="navbar-toggler-icon"></span>
+                </button> */}
                 <div
                   className="collapse navbar-collapse"
                   id="navbarSupportedContent"
