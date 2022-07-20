@@ -101,17 +101,17 @@ class App extends Component {
               />
             </button>
             <button
-              className="lh-1 fs-6  text-white me-1 btn h-100 m-0 row"
+              className="lh-1 fs-6  text-white me-1 btn h-100 m-0 "
               style={{ width: '10%' }}
             >
               <div className="col-2 d-inline-block ">
                 <FontAwesomeIcon icon={faMapMarker} className="text-white " />
               </div>
-              <div className="col-10 text-white d-inline-block text-start">
+              <div className="col-10 text-white d-inline-block ">
                 <span style={{ fontSize: '10px' }}>Delivery to Mubashar</span>
-                <p style={{ fontSize: '10px', fontWeight: 'bold' }}>
+                {/* <p style={{ fontSize: '10px', fontWeight: 'bold' }}>
                   pakpattan 5102
-                </p>
+                </p> */}
               </div>
             </button>
             {/* start form */}
@@ -331,6 +331,7 @@ class App extends Component {
             </nav>
           </div>
         </header>
+        {/* front carousel start */}
         <div className="m_main position-relative">
           <div className="m_main_top">
             <div
@@ -394,12 +395,99 @@ class App extends Component {
               </button>
             </div>
           </div>
+          {/* front carousel end */}
           {/* main2 */}
           <div className=" m_main_bottom position-absolute ">
             <div className="m_main_bottom_1 row m-0 ">
-              <div className="col">A</div>
-              <div className="col">B</div>
-              <div className="col">C</div>
+              {/* carousel upper image start */}
+              {/* col 1 start */}
+              <div className="col p-2">
+                <div className="m_mainbox1 p-3">
+                  <div className="m_mainbox1_inner w-100 h-100 bg-success ">
+                    <div className="w-100 bg-warning">
+                      <h5>Top picks for your home</h5>
+                      <div className="row m-0">
+                        <div className="col-6 p-0 ">
+                          <a
+                            href="#/"
+                            className=" text-start p-0 rounded-0 btn btn-success w-100 h-100"
+                          >
+                            <img
+                              src="assets/image1.jpg"
+                              alt="image1"
+                              className="img-fluid"
+                            />
+                            ACs
+                          </a>
+                        </div>
+                        <div className="col-6 p-0">
+                          <a
+                            href="#/"
+                            className=" text-start p-0 rounded-0 btn btn-success w-100 h-100"
+                          >
+                            <img
+                              src="assets/image2.jpg"
+                              alt="image1"
+                              className="img-fluid"
+                            />
+                            Refrigerators
+                          </a>
+                        </div>
+                        <div className="col-6 p-0">
+                          <a
+                            href="#/"
+                            className=" text-start p-0 rounded-0 btn btn-success w-100 h-100"
+                          >
+                            <img
+                              src="assets/image3.jpg"
+                              alt="image1"
+                              className="img-fluid"
+                            />
+                            Microwaves
+                          </a>
+                        </div>
+                        <div className="col-6 p-0">
+                          <a
+                            href="#/"
+                            className=" text-start p-0 rounded-0 btn btn-success w-100 h-100"
+                          >
+                            <img
+                              src="assets/image4.jpg"
+                              alt="image1"
+                              className="img-fluid"
+                            />
+                            Washing machines
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <a href="#/" className="btn btn-link">
+                      see more
+                    </a>
+                  </div>
+                </div>
+              </div>
+              {/* col 1 end */}
+              <div className="col p-2">
+                <div className="m_mainbox1 p-3">
+                  <div className="m_mainbox1_inner w-100 h-100 bg-success ">
+                    <div className="w-100 bg-warning">ASd</div>
+                    <a href="#/" className="btn btn-link">
+                      see more
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div className="col p-2">
+                <div className="m_mainbox1 p-3">
+                  <div className="m_mainbox1_inner w-100 h-100 bg-success ">
+                    <div className="w-100 bg-warning"></div>
+                    <a href="#/" className="btn btn-link">
+                      see more
+                    </a>
+                  </div>
+                </div>
+              </div>
               <div className="col">D</div>
             </div>
             <div className="m_main_bottom_2 row m-0 my-3 p-3">
