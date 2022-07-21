@@ -90,6 +90,7 @@ header {
 .a_header_bottom a:focus {
   color: white;
 }
+/* main carousel */
 
 .m_main {
   height: 4818px;
@@ -100,6 +101,19 @@ header {
   height: 600px;
   border: 1px dashed green;
 }
+.m_main_top .carousel-indicators .active {
+  display: none;
+}
+.m_main_top .carousel-indicators > button {
+  display: none;
+}
+.m_main_top .carousel-control-prev,
+.m_main_top .carousel-control-next {
+  width: 5%;
+  height: 50%;
+}
+/* main carousel end */
+
 .m_main_bottom {
   height: 4517px;
   border: 1px dashed #000;
@@ -185,4 +199,25 @@ footer {
 .m_footer_bottom {
   height: 227px;
   background: #131921;
+}
+.m_footer_bottom a {
+  color: white;
+  font-size: 12px;
+  padding: 0px;
+}
+.m_footer_bottom a:hover {
+  color: white;
+  text-decoration: underline;
+}
+.m_footer_bottom ul {
+  width: 50%;
+}
+.m_footer_bottom ul li {
+  margin-bottom: 10px;
+}
+.m_footer-button {
+  color: white !important;
+}
+.m_footer-button:hover {
+  background: transparent !important;
 }

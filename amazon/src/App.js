@@ -3,6 +3,7 @@ import './App.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Header from './component/Header';
 import HeaderModel3 from './component/HeaderModel3';
+import Button from 'react-bootstrap/esm/Button';
 // import Test from './component/Test';
 import {
   faMapMarker,
@@ -10,8 +11,10 @@ import {
   faSearch,
   faCartPlus,
   faStar,
+  faGlobe,
 } from '@fortawesome/free-solid-svg-icons';
 import Canvas from './component/Canvas';
+import FirstCarousel from './component/FirstCarousel';
 
 class App extends Component {
   //properties
@@ -249,68 +252,10 @@ class App extends Component {
           </div>
         </header>
         {/* front carousel start */}
-        <div className="m_main position-relative">
+
+        <div className="m_main position-relative ">
           <div className="m_main_top">
-            <div
-              id="carouselExampleControls"
-              className="carousel slide"
-              data-bs-ride="carousel"
-            >
-              <div className="carousel-inner">
-                <div className="carousel-item active">
-                  <img
-                    src="assets/pix1.jpg"
-                    className="d-block w-100"
-                    alt="pix1"
-                  />
-                </div>
-                <div className="carousel-item">
-                  <img
-                    src="assets/pix2.jpg"
-                    className="d-block w-100"
-                    alt="pix2"
-                  />
-                </div>
-                <div className="carousel-item">
-                  <img
-                    src="assets/pix3.jpg"
-                    className="d-block w-100"
-                    alt="pix3"
-                  />
-                </div>
-                <div className="carousel-item">
-                  <img
-                    src="assets/pix4.jpg"
-                    className="d-block w-100"
-                    alt="pix4"
-                  />
-                </div>
-              </div>
-              <button
-                className="carousel-control-prev h-50"
-                type="button"
-                data-bs-target="#carouselExampleControls"
-                data-bs-slide="prev"
-              >
-                <span
-                  className="carousel-control-prev-icon"
-                  aria-hidden="true"
-                ></span>
-                <span className="visually-hidden">Previous</span>
-              </button>
-              <button
-                className="carousel-control-next h-50"
-                type="button"
-                data-bs-target="#carouselExampleControls"
-                data-bs-slide="next"
-              >
-                <span
-                  className="carousel-control-next-icon"
-                  aria-hidden="true"
-                ></span>
-                <span className="visually-hidden">Next</span>
-              </button>
-            </div>
+            <FirstCarousel />
           </div>
           {/* front carousel end */}
           {/* main2 */}
@@ -694,16 +639,18 @@ class App extends Component {
             </div>
             <hr className="text-secondary" />
             <div className="d-flex justify-content-center">
-              <a href="#/" className="me-5">
+              <a href="#/" className="me-5 pt-2">
                 <img
                   src="assets/amazon logo.png"
                   alt="amazon logo"
                   style={{ width: '80px', height: '40px' }}
                 />
               </a>
-              <a className="" href="#/">
-                B
-              </a>
+
+              <Button variant=" m_footer-button outline-secondary ">
+                <FontAwesomeIcon icon={faGlobe} className="px-1" />
+                English
+              </Button>
             </div>
             <div className="d-flex justify-content-center">
               <ul className="nav">
@@ -795,7 +742,90 @@ class App extends Component {
               </ul>
             </div>
           </div>
-          <div className="m_footer_bottom">B</div>
+
+          <div className="m_footer_bottom">
+            <div className="container pt-5">
+              <div className="row">
+                <div className="col">
+                  <ul className="nav flex-column">
+                    <li className="nav-item">
+                      <a className="nav-link " href="#/">
+                        AbeBook, Books,art &amp;collectible
+                      </a>
+                    </li>
+                    <li className="nav-item">
+                      <a className="nav-link" href="#/">
+                        Shopbop Designer Fashion Brands
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div className="col">
+                  <ul className="nav flex-column">
+                    <li className="nav-item">
+                      <a className="nav-link " href="#/">
+                        AbeBook, Books,art &amp;collectible
+                      </a>
+                    </li>
+                    <li className="nav-item">
+                      <a className="nav-link" href="#/">
+                        Shopbop Designer Fashion Brands
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div className="col">
+                  <ul className="nav flex-column">
+                    <li className="nav-item">
+                      <a className="nav-link " href="#/">
+                        AbeBook, Books,art &amp;collectible
+                      </a>
+                    </li>
+                    <li className="nav-item">
+                      <a className="nav-link" href="#/">
+                        Shopbop Designer Fashion Brands
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div className="col">
+                  <ul className="nav flex-column">
+                    <li className="nav-item">
+                      <a className="nav-link " href="#/">
+                        AbeBook, Books,art &amp;collectible
+                      </a>
+                    </li>
+                    <li className="nav-item">
+                      <a className="nav-link" href="#/">
+                        Shopbop Designer Fashion Brands
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div className="col">
+                  <ul className="nav flex-column">
+                    <li className="nav-item">
+                      <a className="nav-link " href="#/">
+                        AbeBook, Books,art &amp;collectible
+                      </a>
+                    </li>
+                    <li className="nav-item">
+                      <a className="nav-link" href="#/">
+                        Shopbop Designer Fashion Brands
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <p
+              className="text-white text-center mt-3"
+              style={{ fontSize: '12px' }}
+            >
+              Conditions of Use &amp; SalePrivacy NoticeInterest-Based Ads©
+              1996-2022, Amazon.com, Inc. or its affiliates
+            </p>
+          </div>
         </footer>
       </div>
     );
