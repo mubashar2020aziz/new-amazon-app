@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 import './App.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Flag from 'react-world-flags';
 import Header from './component/Header';
 import HeaderModel3 from './component/HeaderModel3';
+// import Test from './component/Test';
 import {
   faMapMarker,
   faBars,
-  faUser,
   faSearch,
-  faChevronDown,
   faCartPlus,
+  faStar,
 } from '@fortawesome/free-solid-svg-icons';
+import Canvas from './component/Canvas';
 
 class App extends Component {
   //properties
@@ -42,55 +42,6 @@ class App extends Component {
   render() {
     return (
       <div>
-        <div
-          className="offcanvas offcanvas-start"
-          tabIndex="-1"
-          id="offcanvasExample"
-          aria-labelledby="offcanvasExampleLabel"
-        >
-          <div className="offcanvas-header bg-dark text-light">
-            <h5 className="offcanvas-title mx-auto" id="offcanvasExampleLabel">
-              {/* <i className="fa fa-user-circle-o mx-2" aria-hidden="true"></i> */}
-              <FontAwesomeIcon icon={faUser} style={{ color: '#fff' }} />
-              Hello,Sign in
-            </h5>
-            <button
-              type="button"
-              className="btn-close text-reset bg-light"
-              data-bs-dismiss="offcanvas"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div className="offcanvas-body">
-            <h5 className="text-dark mx-3 font-weight-bold trending">
-              Trending
-            </h5>
-            <p className="text-gray mx-3 best sellers">Best Sellers</p>
-            <p className="text-gray mx-3 new release">New Release</p>
-            <p className="text-gray mx-3 movers">Movers &amp; Shakers</p>
-            <h4 className="text-dark mx-3 my-2 font-weight-bold">
-              Digital Content And Devices
-            </h4>
-
-            {/* <!-- shop and category End --> */}
-
-            <h6 className="text-muted text-uppercase mx-3 my-3">
-              Help &amp; Setting
-            </h6>
-            <a href="#/" className="btn btn-outline-success btn-sm w-100 mb-3">
-              Your Account
-            </a>
-            <a
-              href="login.html"
-              className="btn btn-outline-warning btn-sm w-100 my-3"
-            >
-              Sign in
-            </a>
-          </div>
-        </div>
-
-        {/* <!-- finish drawer code --> */}
-
         <header>
           <div className={`a_header_top p-1 w-100 ` + this.state.x}>
             <button className="me-1 btn h-100" style={{ width: '10%' }}>
@@ -165,31 +116,12 @@ class App extends Component {
               </div>
             </form>
             {/* form end */}
-            <button
-              className="  btn h-100 p-0"
-              data-bs-toggle="modal"
-              data-bs-target="#exampleModal2"
-              style={{ width: '3%' }}
-            >
-              <Flag code={'ae'} height="10" className="me-1" />
-              <FontAwesomeIcon
-                icon={faChevronDown}
-                className="text-white w-25"
-              />
-              <Header />
-            </button>
-            <button
-              className="me-1 btn h-100 p-0"
-              style={{ width: '7%', color: '#fff' }}
-              data-bs-toggle="modal"
-              data-bs-target="#exampleModal3"
-            >
-              <div style={{ fontSize: '10px' }}>Hello,Sign in</div>
-              <span style={{ fontSize: '12px', fontWeight: 'bold' }}>
-                Account &amp; Lists
-              </span>
-              <HeaderModel3 />
-            </button>
+
+            <Header />
+
+            {/* header model 3 start */}
+            <HeaderModel3 />
+            {/* header model 3 end */}
             <button
               className=" btn h-100 p-0"
               style={{ width: '7%', color: '#fff' }}
@@ -219,31 +151,16 @@ class App extends Component {
                     aria-controls="offcanvasExample"
                   />
                   All
-                  {/* navbar sidebarclose */}
                 </a>
-                {/* <button
-                  class="navbar-toggler"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#navbarSupportedContent"
-                  aria-controls="navbarSupportedContent"
-                  aria-expanded="false"
-                  aria-label="Toggle navigation"
-                >
-                  <span class="navbar-toggler-icon"></span>
-                </button> */}
+                <Canvas />
                 <div
                   className="collapse navbar-collapse"
                   id="navbarSupportedContent"
                 >
                   <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                     <li className="nav-item">
-                      <a
-                        className="nav-link active"
-                        aria-current="page"
-                        href="#/"
-                      >
-                        BestSeller
+                      <a className="nav-link" href="#/">
+                        Best Seller
                       </a>
                     </li>
                     <li className="nav-item">
@@ -417,7 +334,9 @@ class App extends Component {
                               alt="image1"
                               className="img-fluid"
                             />
-                            ACs
+                            <p style={{ fontSize: '12px', color: 'gray' }}>
+                              ACs
+                            </p>
                           </a>
                         </div>
                         <div className="col-6 p-0">
@@ -430,7 +349,10 @@ class App extends Component {
                               alt="image1"
                               className="img-fluid"
                             />
-                            Refrigerators
+                            <p style={{ fontSize: '12px', color: 'gray' }}>
+                              {' '}
+                              Refrigerators
+                            </p>
                           </a>
                         </div>
                         <div className="col-6 p-0">
@@ -443,7 +365,9 @@ class App extends Component {
                               alt="image1"
                               className="img-fluid"
                             />
-                            Microwaves
+                            <p style={{ fontSize: '12px', color: 'gray' }}>
+                              Microwaves
+                            </p>
                           </a>
                         </div>
                         <div className="col-6 p-0">
@@ -456,7 +380,9 @@ class App extends Component {
                               alt="image1"
                               className="img-fluid"
                             />
-                            Washing machines
+                            <p style={{ fontSize: '12px', color: 'gray' }}>
+                              Washing machines
+                            </p>
                           </a>
                         </div>
                       </div>
@@ -468,16 +394,7 @@ class App extends Component {
                 </div>
               </div>
               {/* col 1 end */}
-              <div className="col p-2">
-                <div className="m_mainbox1 p-3">
-                  <div className="m_mainbox1_inner w-100 h-100 bg-success ">
-                    <div className="w-100 bg-warning">ASd</div>
-                    <a href="#/" className="btn btn-link">
-                      see more
-                    </a>
-                  </div>
-                </div>
-              </div>
+              {/* col 2 start */}
               <div className="col p-2">
                 <div className="m_mainbox1 p-3">
                   <div className="m_mainbox1_inner w-100 h-100 bg-success ">
@@ -488,7 +405,64 @@ class App extends Component {
                   </div>
                 </div>
               </div>
-              <div className="col">D</div>
+              {/* col2 end */}
+              {/* col3 start */}
+              <div className="col p-2">
+                <div className="m_mainbox1 p-3">
+                  <div className="m_mainbox1_inner w-100 h-100 bg-success ">
+                    <div className="w-100 bg-warning"></div>
+                    <a href="#/" className="btn btn-link">
+                      see more
+                    </a>
+                  </div>
+                </div>
+              </div>
+              {/* col3end */}
+              {/* col 4 start */}
+              <div className="col">
+                <div className="row p-0">
+                  <div
+                    className="col-12 p-3 mb-3 bg-white p-3"
+                    style={{
+                      height: '150px',
+                    }}
+                  >
+                    <h4 className="mb-3" style={{ fontWeight: 'bold' }}>
+                      Sign in for your best experience
+                    </h4>
+                    <button className="btn btn-warning border border-secondary w-100 rounded-3 shadow-lg">
+                      Sign in securely
+                    </button>
+                  </div>
+                  {/* second part */}
+                  <div
+                    className="col-12 p-3 bg-white"
+                    style={{ height: '238px' }}
+                  >
+                    <div className=" mb-2" style={{ height: '170px' }}>
+                      <a href="#/">
+                        <img
+                          src="assets/image5.jpg"
+                          alt="image5"
+                          style={{ height: '150px', marginLeft: '90px' }}
+                        />
+                      </a>
+                    </div>
+                    <div className="float-start ">
+                      <FontAwesomeIcon icon={faStar} className="text-warning" />
+                      <FontAwesomeIcon icon={faStar} className="text-warning" />
+                      <FontAwesomeIcon icon={faStar} className="text-warning" />
+                      <FontAwesomeIcon icon={faStar} className="text-warning" />
+                      <span className="ratingcount">21</span>
+                      <div>$1900:00</div>
+                    </div>
+                    <button className="btn btn-warning btn-sm float-end border border-secondary  rounded-3 shadow-lg">
+                      Shop Now
+                    </button>
+                  </div>
+                </div>
+              </div>
+              {/* col 4 end */}
             </div>
             <div className="m_main_bottom_2 row m-0 my-3 p-3">
               <div className="col-6">A</div>
@@ -567,7 +541,262 @@ class App extends Component {
             </div>
           </div>
         </div>
-        <footer></footer>
+        <footer>
+          <div
+            className="btn w-100 rounded-0 border-0"
+            style={{ background: '#37475a', color: '#fff' }}
+          >
+            Back to top
+          </div>
+          <div className="m_footer_top">
+            <div className="container">
+              <div className="row pt-5 text-white">
+                <div className="col-md-3 ">
+                  <h6>Get to Know Us</h6>
+                  <ul className="nav flex-column">
+                    <li className="nav-item">
+                      <a
+                        className="nav-link active"
+                        aria-current="page"
+                        href="#/"
+                      >
+                        About Us
+                      </a>
+                    </li>
+                    <li className="nav-item">
+                      <a className="nav-link" href="#/">
+                        Careers
+                      </a>
+                    </li>
+                    <li className="nav-item">
+                      <a className="nav-link" href="#/">
+                        Press Releases
+                      </a>
+                    </li>
+                    <li className="nav-item">
+                      <a className="nav-link" href="#/">
+                        Amazon Cares
+                      </a>
+                    </li>
+                    <li className="nav-item">
+                      <a className="nav-link" href="#/">
+                        Gift a Smile
+                      </a>
+                    </li>
+                    <li className="nav-item">
+                      <a className="nav-link" href="#/">
+                        Amazon Science
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div className="col-md-3">
+                  <h6>Connect with Us</h6>
+                  <ul className="nav flex-column">
+                    <li className="nav-item">
+                      <a className="nav-link active" href="#/">
+                        Facebook
+                      </a>
+                    </li>
+                    <li className="nav-item">
+                      <a className="nav-link" href="#/">
+                        Twitter
+                      </a>
+                    </li>
+                    <li className="nav-item">
+                      <a className="nav-link" href="#/">
+                        Instagram
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div className="col-md-3">
+                  <h6>Make Money with Us</h6>
+                  <ul class="nav flex-column">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#/">
+                        Sell on Amazon
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#/">
+                        Sell Under Amazon Accelator
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#/">
+                        Amazon Global Selling
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#/">
+                        Become An Affiliate
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#/">
+                        Fulfilment by Amazon
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#/">
+                        Advertise Your Product
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#/">
+                        Amazon Pay on Merchants
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div className="col-md-3">
+                  <h6>Let Us Help You</h6>
+                  <ul className="nav flex-column">
+                    <li className="nav-item">
+                      <a className="nav-link active" href="#/">
+                        COVID-19 And Amazon
+                      </a>
+                    </li>
+                    <li className="nav-item">
+                      <a className="nav-link" href="#/">
+                        Your Account
+                      </a>
+                    </li>
+                    <li className="nav-item">
+                      <a className="nav-link" href="#/">
+                        Return Center
+                      </a>
+                    </li>
+                    <li className="nav-item">
+                      <a className="nav-link" href="#/">
+                        100% Purchase Protection
+                      </a>
+                    </li>
+                    <li className="nav-item">
+                      <a className="nav-link" href="#/">
+                        Amazon App Download
+                      </a>
+                    </li>
+                    <li className="nav-item">
+                      <a className="nav-link" href="#/">
+                        Amazon Assistant Download
+                      </a>
+                    </li>
+                    <li className="nav-item">
+                      <a className="nav-link" href="#/">
+                        Help
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <hr className="text-secondary" />
+            <div className="d-flex justify-content-center">
+              <a href="#/" className="me-5">
+                <img
+                  src="assets/amazon logo.png"
+                  alt="amazon logo"
+                  style={{ width: '80px', height: '40px' }}
+                />
+              </a>
+              <a className="" href="#/">
+                B
+              </a>
+            </div>
+            <div className="d-flex justify-content-center">
+              <ul className="nav">
+                <li className="nav-item ms-1 me-2">
+                  <a className="nav-link " href="#/">
+                    Australia
+                  </a>
+                </li>
+                <li className="nav-item ms-1 me-2">
+                  <a className="nav-link" href="#/">
+                    Brazil
+                  </a>
+                </li>
+                <li className="nav-item ms-1 me-2">
+                  <a className="nav-link" href="#/">
+                    Canada
+                  </a>
+                </li>
+                <li className="nav-item ms-1 me-2">
+                  <a className="nav-link" href="#/">
+                    China
+                  </a>
+                </li>
+                <li className="nav-item ms-1 me-2">
+                  <a className="nav-link" href="#/">
+                    France
+                  </a>
+                </li>
+                <li className="nav-item ms-1 me-2">
+                  <a className="nav-link" href="#/">
+                    Germany
+                  </a>
+                </li>
+                <li className="nav-item ms-1 me-2">
+                  <a className="nav-link" href="#/">
+                    Italy
+                  </a>
+                </li>
+                <li className="nav-item ms-1 me-2">
+                  <a className="nav-link" href="#/">
+                    Japan
+                  </a>
+                </li>
+                <li className="nav-item ms-1 me-2">
+                  <a className="nav-link" href="#/">
+                    Mexico
+                  </a>
+                </li>
+                <li className="nav-item ms-1 me-2">
+                  <a className="nav-link" href="#/">
+                    Netherland
+                  </a>
+                </li>
+                <li className="nav-item ms-1 me-2">
+                  <a className="nav-link" href="#/">
+                    Poland
+                  </a>
+                </li>
+                <li className="nav-item ms-1 me-2">
+                  <a className="nav-link" href="#/">
+                    Singapore
+                  </a>
+                </li>
+                <li className="nav-item ms-1 me-2">
+                  <a className="nav-link" href="#/">
+                    Span
+                  </a>
+                </li>
+                <li className="nav-item ms-1 me-2">
+                  <a className="nav-link" href="#/">
+                    Turkey
+                  </a>
+                </li>
+                <li className="nav-item ms-1 me-2">
+                  <a className="nav-link" href="#/">
+                    United Arab Amirates
+                  </a>
+                </li>
+                <li className="nav-item ms-1 me-2">
+                  <a className="nav-link" href="#/">
+                    United Kingdom
+                  </a>
+                </li>
+                <li className="nav-item ms-1 me-2">
+                  <a className="nav-link" href="#/">
+                    Unided State
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="m_footer_bottom">B</div>
+        </footer>
       </div>
     );
   }

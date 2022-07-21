@@ -6,6 +6,16 @@
 /* .tdbr2 {
   border-radius: 1px ;
 } */
+.offcanvas {
+  margin-left: -40px;
+}
+.offcanvas-body {
+  margin-left: 20px;
+}
+
+.offcanvas a {
+  margin-left: 10px;
+}
 .hform {
   border: 2px solid #131921;
   border-radius: 5px;
@@ -16,22 +26,29 @@
 button:focus {
   box-shadow: none !important;
 }
-.m_signin_model {
-  display: block;
-}
+/* signin model header */
+
 .m_ht_signin_model {
-  top: 30px;
-  left: 368px;
+  top: 30px !important;
+  left: 368px !important;
 }
 .m_ht_signin_model a {
   color: #333;
-  font-size: 14px;
-  padding: 3px;
+  font-size: 14px !important;
+  padding: 3px !important;
 }
 .m_ht_signin_model a:hover {
   color: #ff9900;
   text-decoration: underline;
 }
+.m_signin_model {
+  display: block;
+}
+.m_signin_model p {
+  margin-top: 20px;
+}
+
+/* signin model header end */
 
 header {
   /* height: 99px; */
@@ -50,7 +67,7 @@ header {
 .m_countrydd {
   width: 20% !important;
   left: 950px !important;
-  top: 25px;
+  top: 25px !important;
 }
 .a_header_bottom {
   height: 39px;
@@ -144,7 +161,28 @@ header {
   height: 140px;
 }
 footer {
-  height: 227px;
   border: 1px dashed green;
+}
+.m_footer_top {
+  height: 452px;
+  background: #232f3e;
+}
+.m_footer_top .container {
+  max-width: 990px;
+}
+.m_footer_top a {
+  color: white;
+  padding: 4px 0px;
+  font-size: 14px;
+}
+.m_footer_top h6 {
+  font-weight: 700;
+}
+.m_footer_top a:hover {
+  text-decoration: underline;
+  color: white;
+}
+.m_footer_bottom {
+  height: 227px;
   background: #131921;
 }
