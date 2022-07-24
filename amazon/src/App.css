@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'Roboto Slab', serif;
 }
 /* .tdbr2 {
   border-radius: 1px ;
@@ -305,5 +305,30 @@ footer {
 .m_dtl_cusAlsoView {
   height: 400px;
 }
-
+.m_dtl_custQnA {
+  min-height: '540px';
+  border: 1px solid green;
+}
+.m_dtl_customerReview {
+  min-height: 1264px;
+  border: 1px solid blue;
+}
+.m_dtl_customerReview_aside {
+  height: 311px;
+  border: 1px solid black;
+}
+.m_dtl_customerReview_aside .progress {
+  background: #ffa41c;
+}
+.m_dtl_customerReview_aside a {
+  text-decoration: none;
+}
+.m_individual_commit {
+  min-height: 300px;
+  border: 1px dashed red;
+}
+.review_with_img {
+  height: 400px;
+  border: 1px solid cyan;
+}
 /* //////////////////Detail page end css//////////////////////// */

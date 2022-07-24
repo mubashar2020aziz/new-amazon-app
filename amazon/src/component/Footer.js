@@ -77,39 +77,39 @@ const Footer = () => {
               </div>
               <div className="col-md-3">
                 <h6>Make Money with Us</h6>
-                <ul class="nav flex-column">
-                  <li class="nav-item">
-                    <a class="nav-link active" href="#/">
+                <ul className="nav flex-column">
+                  <li className="nav-item">
+                    <a className="nav-link active" href="#/">
                       Sell on Amazon
                     </a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#/">
+                  <li className="nav-item">
+                    <a className="nav-link" href="#/">
                       Sell Under Amazon Accelator
                     </a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#/">
+                  <li className="nav-item">
+                    <a className="nav-link" href="#/">
                       Amazon Global Selling
                     </a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#/">
+                  <li className="nav-item">
+                    <a className="nav-link" href="#/">
                       Become An Affiliate
                     </a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#/">
+                  <li className="nav-item">
+                    <a className="nav-link" href="#/">
                       Fulfilment by Amazon
                     </a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#/">
+                  <li className="nav-item">
+                    <a className="nav-link" href="#/">
                       Advertise Your Product
                     </a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#/">
+                  <li className="nav-item">
+                    <a className="nav-link" href="#/">
                       Amazon Pay on Merchants
                     </a>
                   </li>

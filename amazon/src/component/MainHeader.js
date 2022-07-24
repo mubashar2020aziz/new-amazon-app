@@ -125,7 +125,7 @@ class MainHeader extends Component {
               style={{ width: '7%', color: '#fff' }}
             >
               <div style={{ fontSize: '12px' }}>Return</div>
-              <span style={{ fontSize: '16px', fontWeight: 'bold' }}>
+              <span style={{ fontSize: '16px', fontWeight: '300' }}>
                 &amp;Orders
               </span>
             </button>

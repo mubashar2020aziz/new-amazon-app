@@ -17,7 +17,7 @@ const Test = () => {
         style={{ width: '7%', color: '#fff' }}
       >
         <div style={{ fontSize: '10px' }}>Hello,Sign in</div>
-        <span style={{ fontSize: '12px', fontWeight: 'bold' }}>
+        <span style={{ fontSize: '12px', fontWeight: '300' }}>
           Account &amp; Lists
         </span>
       </Button>
