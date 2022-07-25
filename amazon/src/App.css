@@ -331,4 +331,32 @@ footer {
   height: 400px;
   border: 1px solid cyan;
 }
+.m_dtl_productThum {
+  width: 50px;
+}
+.m_dtl_productThum a:hover {
+  border: 1px solid #ff9900 !important;
+  box-shadow: 0px 0px 8px 2px #ff9900;
+}
+.m_dtl_prodMainImg {
+  width: 450px;
+  height: 450;
+}
+.m_dtl_prodMainImg:hover > div > div:last-child {
+  overflow: hidden;
+  z-index: 1;
+}
+.dt1225 {
+  top: 1225px;
+}
+.m_buybtn {
+  background: #ffa41c !important;
+  color: #000 !important;
+}
+.dtl_sponsoredBox {
+  height: 280px;
+}
+.dtl_sponsoredBox_imgcont {
+  height: 250px;
+}
 /* //////////////////Detail page end css//////////////////////// */
