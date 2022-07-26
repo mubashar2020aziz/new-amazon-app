@@ -22,8 +22,8 @@ const Test = () => {
         </span>
       </Button>
 
-      <Modal className="m_ht_signin_model" show={show} onHide={handleClose}>
-        <Modal.Header className="m_signin_model text-center ">
+      <Modal className="m_ht_signin_model " show={show} onHide={handleClose}>
+        <Modal.Header className="m_signin_model text-center d-block ">
           <button className="btn btn-warning w-50  ">Sign in</button>
           <p className="text-dark fs-6 ">
             New Customers?
@@ -33,12 +33,12 @@ const Test = () => {
           </p>
         </Modal.Header>
         <Modal.Body>
-          <div className="row">
+          <div className="row border">
             <div className="col-6 tbdr text-dark">
               <ul className="nav flex-column">
                 <h5>Your List</h5>
                 <li className="nav-item">
-                  <a className="nav-link active" href="#/">
+                  <a className="nav-link " href="#/">
                     Create a Wish List
                   </a>
                 </li>
