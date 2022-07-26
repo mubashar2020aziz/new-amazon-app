@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
-import { faInfo, faStar, faUser } from '@fortawesome/free-solid-svg-icons';
+import {
+  faEnvelope,
+  faInfo,
+  faStar,
+  faUser,
+} from '@fortawesome/free-solid-svg-icons';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import ReactImageMagnify from 'react-image-magnify';
@@ -31,7 +36,38 @@ class Detail extends Component {
     return (
       <>
         <div className="m_main m_dtl_main bg-white mx-auto">
-          <div className="m_dtl_top_bannar"></div>
+          {/* top advrti bannar start */}
+          <div className="m_dtl_top_bannar">
+            <img
+              src="assets/advertise img.jpg"
+              alt="adverti dtl bannar"
+              className="img-fluid mx-auto d-block"
+            />
+            {/* top advrti bannar end */}
+          </div>
+          {/* dtl advertis second-top product bannar start */}
+          <div className="m_dtl_top_consider_this_item d-none">
+            <h3>Consider these items</h3>
+            <div className="row  m-0 h-75">
+              <div className="col-4 p-2">
+                <a href="#/" className="btn btn-danger rounded-0 w-100 h-100">
+                  A
+                </a>
+              </div>
+              <div className="col-4 p-2">
+                <a href="#/" className="btn btn-danger rounded-0 w-100 h-100">
+                  A
+                </a>
+              </div>
+              <div className="col-4 p-2">
+                <a href="#/" className="btn btn-danger rounded-0 w-100 h-100">
+                  A
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* dtl advertis second-top product bannar end */}
           <div className="row m-0 m_dtl_productcontainer">
             {/* zoom container start */}
             <div className="col-9 p-0 tdr">
@@ -151,7 +187,7 @@ class Detail extends Component {
                       Cost EMI on select cards for orders above ₹3000
                     </li>
                     <li className="list-group-item">
-                      <span className="text-danger">Bank Offer (12):</span>{' '}
+                      <span className="text-danger">Bank Offer (12):</span>
                       Prime Savings Flat INR 1000 Instant Discount on ICICI Bank
                       Cards. Minimum purchase value INR 40000. For Prime
                       customers only
@@ -184,6 +220,9 @@ class Detail extends Component {
                       </a>
                     </li>
                   </ul>
+                  <a href="#productInfo" className="btn3">
+                    See more products details
+                  </a>
                 </div>
               </div>
 
@@ -191,6 +230,30 @@ class Detail extends Component {
             </div>
             {/* detail top page start */}
             <div className="col-3 p-1 tdr">
+              {/* social media icon start */}
+              <ul className="nav ">
+                <li className="nav-item ">
+                  <a className="nav-link active" href="#/">
+                    Share
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="#/">
+                    <FontAwesomeIcon icon={faEnvelope} />
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="#/">
+                    <i class="fab fa-facebook"></i>
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="#/">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+              </ul>
+              {/* social media icon end */}
               <form>
                 <div className="card">
                   <div className="card-header">
@@ -317,7 +380,7 @@ class Detail extends Component {
             <h5>Customers who viewed this item also viewed</h5>
           </div>
           {/* product detail */}
-          <div className="m_dtl_prodInfo">
+          <div className="m_dtl_prodInfo " id="productInfo">
             <div className="row">
               <div className="col-6 border-top pt-3">
                 <h5 className="text-dark">Product information</h5>

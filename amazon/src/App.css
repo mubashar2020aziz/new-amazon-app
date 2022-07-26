@@ -346,6 +346,7 @@ footer {
   overflow: hidden;
   z-index: 1;
 }
+
 .dt1225 {
   top: 1225px;
 }
@@ -358,5 +359,17 @@ footer {
 }
 .dtl_sponsoredBox_imgcont {
   height: 250px;
+}
+.m_dtl_top_consider_this_item {
+  height: 190px;
+  border: 1px solid red;
+}
+.btn3 {
+  text-decoration: none;
+  outline: none;
+}
+.btn3:hover {
+  color: #ff9900;
+  text-decoration: underline;
 }
 /* //////////////////Detail page end css//////////////////////// */
