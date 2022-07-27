@@ -2,7 +2,7 @@ import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import FirstCarousel from '../component/FirstCarousel';
 
-import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { faStar, faUserCircle } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Main = () => {
@@ -20,7 +20,70 @@ const Main = () => {
             {/* col 1 start */}
             <div className="col p-2">
               <div className="m_mainbox1 p-3">
-                <div className="m_mainbox1_inner w-100 h-100 bg-success ">
+                {/* logic system */}
+                <div className="m_mainbox1_inner w-100 h-100 ">
+                  <div className="row m-0" style={{ height: '70px' }}>
+                    <div className="col-4 ">
+                      <FontAwesomeIcon
+                        style={{ fontSize: '3em', color: '#aab7b7' }}
+                        icon={faUserCircle}
+                      />
+                    </div>
+                    <div className="col-8 ">
+                      <h5 className="m-0">
+                        Hi, <span className="custname">Mubashar</span>
+                      </h5>
+                      <span style={{ fontSize: '12px' }}>
+                        Customer since,2017
+                      </span>
+                    </div>
+                  </div>
+                  <p>Top links for you</p>
+                  <div className="row m-0 m_toplinks">
+                    <div className="col-6 p-0">
+                      <a href="#/" className="btn  rounded-1 w-100 h-100">
+                        <img
+                          className="img-fluid"
+                          src="assets/image1.jpg"
+                          alt="logicimg"
+                        />
+                        <p className="p-0">Your Orders</p>
+                      </a>
+                    </div>
+                    <div className="col-6 p-0">
+                      <a href="#/" className="btn  rounded-1 w-100 h-100">
+                        <img
+                          className="img-fluid"
+                          src="assets/image2.jpg"
+                          alt="logicimg"
+                        />
+                        <p className="p-0"> Refrigerator</p>
+                      </a>
+                    </div>
+                    <div className="col-6 p-0">
+                      <a href="#/" className="btn  rounded-1 w-100 h-100">
+                        <img
+                          className="img-fluid"
+                          src="assets/image3.jpg"
+                          alt="logicimg"
+                        />
+                        <p className="p-0">Microwaves</p>
+                      </a>
+                    </div>
+                    <div className="col-6 p-0">
+                      <a href="#/" className="btn  rounded-1 w-100 h-100">
+                        <img
+                          className="img-fluid"
+                          src="assets/image4.jpg"
+                          alt="logicimg"
+                        />
+                        <p className="p-0">washing machines</p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                {/* end logic */}
+                <div className="m_mainbox1_inner w-100 h-100 bg-success d-none">
                   <div className="w-100 bg-warning">
                     <h5>Top picks for your home</h5>
                     <div className="row m-0">

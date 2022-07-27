@@ -239,9 +239,9 @@ header {
   width: 98%;
   height: 98%;
 }
-.m_mainbox1_inner > div {
+/* .m_mainbox1_inner > div {
   height: 90%;
-}
+} */
 .m_mainbox1_inner > a {
   text-decoration: none;
 }
@@ -252,6 +252,15 @@ header {
 .m_mainbox1_inner .col-6 {
   height: 140px;
 }
+.m_toplinks {
+  height: 265px;
+}
+.m_toplinks > div {
+  background: #c7d7da;
+  height: 50% !important;
+  border: 1px solid #fff;
+}
+/* start footer css ////////////////////////////////////*/
 footer {
   border: 1px dashed green;
 }
@@ -299,6 +308,7 @@ footer {
 .m_footer-button:hover {
   background: transparent !important;
 }
+/* end footer css */
 /* //////////////////Detail page css//////////////////////// */
 .m_dtl_main {
   width: 98%;
