@@ -8,6 +8,8 @@ import {
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import ReactImageMagnify from 'react-image-magnify';
+import ZoomVideo from './ZoomVideo';
+
 class Detail extends Component {
   state = {
     prodSrollFix: 'postion-relative',
@@ -88,14 +90,27 @@ class Detail extends Component {
                         />
                       </a>
                     </li>
+                    {/* video and image start */}
                     <li className="nav-item">
-                      <a className="nav-link p-0 mb-1 mt-2 border" href="#/">
+                      <a
+                        className="nav-link p-0 mb-1 mt-2 position-relative border overflow-hidden"
+                        href="#/"
+                        data-bs-toggle="modal"
+                        data-bs-target="#exampleModal"
+                      >
+                        <ZoomVideo />
+                        <img
+                          className="img-fluid position-absolute text-white video_dtl"
+                          src="assets/play button.png"
+                          alt="videobtn"
+                        />
                         <img
                           src="assets/zoom1.jpg"
-                          alt="zoom1"
+                          alt="zoom2"
                           className="img-fluid"
                         />
                       </a>
+                      {/* video and image end */}
                     </li>
                     <li className="nav-item">
                       <a className="nav-link p-0 mb-1 mt-2 border" href="#/">
@@ -266,7 +281,7 @@ class Detail extends Component {
                       />
                       <label
                         className="form-check-label"
-                        for="flexRadioDefault1"
+                        htmlFor="flexRadioDefault1"
                       >
                         <span className="d-block text-dark">With Exchange</span>
                         <span className="d-block text-danger">
@@ -285,7 +300,7 @@ class Detail extends Component {
                       />
                       <label
                         className="form-check-label"
-                        for="flexRadioDefault1"
+                        htmlFor="flexRadioDefault1"
                       >
                         <span className="d-block text-dark">
                           Without Exchange
@@ -310,7 +325,7 @@ class Detail extends Component {
                         className="form-select form-select-sm mb-3 w-25 d-inline-block mx-2"
                         aria-label=".form-select-lg example"
                       >
-                        <option selected>1</option>
+                        <option select>1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
                         <option value="4">4</option>
@@ -336,7 +351,7 @@ class Detail extends Component {
                       />
                       <label
                         className="form-check-label"
-                        for="flexCheckDefault1"
+                        htmlFor="flexCheckDefault1"
                       >
                         Add gift options
                       </label>
@@ -350,7 +365,7 @@ class Detail extends Component {
                 className="form-select"
                 aria-label="Default select example"
               >
-                <option selected>Open this select menu</option>
+                <option select>Open this select menu</option>
                 <option value="1">One</option>
                 <option value="2">Two</option>
                 <option value="3">Three</option>

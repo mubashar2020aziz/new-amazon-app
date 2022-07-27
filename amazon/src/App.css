@@ -260,6 +260,7 @@ header {
   height: 50% !important;
   border: 1px solid #fff;
 }
+
 /* start footer css ////////////////////////////////////*/
 footer {
   border: 1px dashed green;
@@ -403,4 +404,19 @@ footer {
   color: #ff9900;
   text-decoration: underline;
 }
+.video_dtl {
+  background: rgba(0, 0, 0, 0.3);
+}
+.m_prodVideoBoxModel {
+  z-index: 10000 !important;
+}
+.m_prodVideoBoxModel > div {
+  margin-top: 62px !important;
+  width: 100%;
+}
+
+.m_prodVideoBoxModel .modal-body {
+  height: 456px;
+}
+
 /* //////////////////Detail page end css//////////////////////// */
